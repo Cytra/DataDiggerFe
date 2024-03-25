@@ -1,48 +1,57 @@
-import * as React from "react"
+import React from "react"
 import Layout from "../components/_App/layout"
 import Seo from "../components/_App/seo"
 import Navbar from "../components/_App/Navbar"
-import Banner from "../components/Index/Banner"
-import OurSolutions from "../components/Index/OurSolutions"
-import OurServices from "../components/Index/OurServices"
-import OurFeatures from "../components/Index/OurFeatures"
-import TeamMember from "../components/Index/TeamMember" 
-import RecentProjects from "../components/Index/RecentProjects"
-import Pricing from "../components/Index/Pricing"
-import Testimonials from "../components/Index/Testimonials"
-import Partner from "../components/Index/Partner"
-import OurBlog from "../components/Index/OurBlog"
-import ProjectStartArea from "../components/Index/ProjectStartArea"
+import MainBanner from "../components/BigDataAnalysisStartup/MainBanner"
+import FeaturedServices from "../components/BigDataAnalysisStartup/FeaturedServices"
+import WhyChooseUs from "../components/BigDataAnalysisStartup/WhyChooseUs"
+import WhatWeDo from "../components/BigDataAnalysisStartup/WhatWeDo"
+import Funfacts from "../components/BigDataAnalysisStartup/Funfacts"
+import Services from "../components/BigDataAnalysisStartup/Services"
+import Testimonials from "../components/BigDataAnalysisStartup/Testimonials"
+import WeServe from "../components/BigDataAnalysisStartup/WeServe"
+import TeamMembers from "../components/BigDataAnalysisStartup/TeamMembers"
+import CaseStudy from "../components/BigDataAnalysisStartup/CaseStudy"
+import BlogPost from "../components/BigDataAnalysisStartup/BlogPost"
+import StartProject from "../components/Common/StartProject"
 import Footer from "../components/_App/Footer"
+import ComingSoon from "../components/ComingSoon/CommingSoon"
+import MembershipLevels from "../components/MembershipLevels/MembershipLevels"
 
 const IndexPage = () => (
   <Layout>
 
     <Navbar />
 
-    <Banner />
+    <MainBanner />
 
-    <OurSolutions />
+    <FeaturedServices />
 
-    <OurServices />
+    <WhyChooseUs />
 
-    <OurFeatures />
+    <WhatWeDo />
 
-    <TeamMember />
+    <Funfacts />
 
-    <RecentProjects />
-
-    <Pricing />
+    <Services />
 
     <Testimonials />
 
-    <Partner />
+    <WeServe />
 
-    <OurBlog />
+    <TeamMembers />
 
-    <ProjectStartArea />
+    <CaseStudy />
+
+    <BlogPost />
+
+    <StartProject />
+
+    <ComingSoon/>
 
     <Footer />
+
+    <MembershipLevels/>
 
   </Layout>
 )

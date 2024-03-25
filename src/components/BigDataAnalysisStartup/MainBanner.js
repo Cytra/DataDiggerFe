@@ -30,17 +30,14 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="100"
                 >
-                  Managed Analytics and Data Analysis Platform
+                  Tired of getting blocked while scraping the web?
                 </h1>
-
                 <p
                   data-aos="fade-right"
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 >
-                  We have created a cloud based tool to do your all boring tasks
-                  related to data analysis and decesion making based on the
-                  nature of data!
+                  The DataBridge web scraping API handles headless browsers and rotates proxies for you.
                 </p>
 
                 <div

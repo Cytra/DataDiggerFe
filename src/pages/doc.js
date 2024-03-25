@@ -3,24 +3,34 @@ import Layout from "../components/_App/layout"
 import Seo from "../components/_App/seo"
 import Navbar from "../components/_App/Navbar"
 import PageBanner from "../components/Common/PageBanner"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemPanel,
+  AccordionItemButton,
+} from "react-accessible-accordion"
+import StartProject from "../components/Common/StartProject"
 import Footer from "../components/_App/Footer"
-import { Link } from "gatsby"
-import MembershipLevels from "../components/MembershipLevels/MembershipLevels"
+import Documenation from "../components/Documentation/Documenation"
 
-const MembershipLevelsPage = () => {
+const DocPage = () => {
   return (
     <Layout>
+
       <Navbar />
 
       <PageBanner
-        pageTitle="Member Ship Levels"
+        pageTitle="Documentation"
         homePageText="Home"
         homePageUrl="/"
-        activePageText="Member Ship Levels"
+        activePageText="Doc"
       />
 
-<MembershipLevels/>
+      <Documenation />
+
       <Footer />
+
     </Layout>
   )
 }
@@ -30,6 +40,6 @@ const MembershipLevelsPage = () => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Membership Levels" />
+export const Head = () => <Seo title="Doc" />
 
-export default MembershipLevelsPage
+export default DocPage

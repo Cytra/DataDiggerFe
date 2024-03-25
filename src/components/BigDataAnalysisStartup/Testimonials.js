@@ -15,10 +15,10 @@ const Testimonials = () => {
         <div className="container">
           <div className="section-title">
             <h2>What Our Clients are Saying?</h2>
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna.
-            </p>
+            </p> */}
           </div>
 
           <Swiper
@@ -44,10 +44,10 @@ const Testimonials = () => {
               <div className="single-testimonials-box">
                 <img src={user1} className="shadow-sm" alt="testimonials" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna ali.
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
+                DataBridge simplified our day-to-day marketing 
+                and engineering operations a lot . We no longer 
+                have to worry about managing our own fleet of headless 
+                browsers, and we no longer have to spend days sourcing the right proxy provider
                 </p>
 
                 <div className="client-info">
@@ -63,15 +63,15 @@ const Testimonials = () => {
               <div className="single-testimonials-box">
                 <img src={user2} className="shadow-sm" alt="testimonials" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna ali.
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
+                DataBridge is helping us scrape many 
+                job boards and company websites without 
+                having to deal with proxies or chrome browsers. 
+                It drastically simplified our data pipeline
                 </p>
 
                 <div className="client-info">
                   <div className="title">
-                    <h3>David Warner</h3>
+                    <h3>Lisa Warner</h3>
                     <span>CEO at Envato</span>
                   </div>
                 </div>
@@ -82,15 +82,12 @@ const Testimonials = () => {
               <div className="single-testimonials-box">
                 <img src={user3} className="shadow-sm" alt="testimonials" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna ali.
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
+                DataBridge clear documentation, easy-to-use API, and great success rate made it a no-brainer.
                 </p>
 
                 <div className="client-info">
                   <div className="title">
-                    <h3>Sarah Taylor</h3>
+                    <h3>Tom Taylor</h3>
                     <span>CEO at ThemeForest</span>
                   </div>
                 </div>

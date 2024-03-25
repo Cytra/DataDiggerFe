@@ -20,7 +20,7 @@ const Banner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="100"
                 >
-                  Secure IT Solutions Services
+                  Tired of getting blocked while scraping the web?
                 </h1>
 
                 <p
@@ -28,8 +28,7 @@ const Banner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+The DataBridge web scraping API will render your Web page in Real browser.
                 </p>
 
                 <div

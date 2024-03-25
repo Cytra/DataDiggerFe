@@ -37,7 +37,7 @@ const MainBanner = () => {
                   data-aos-duration="1200"
                   data-aos-delay="200"
                 >
-                  The DataBridge web scraping API handles headless browsers and rotates proxies for you.
+                  The DataBridge web scraping API will render your Web page in Real browser.
                 </p>
 
                 <div

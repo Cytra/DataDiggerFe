@@ -3,6 +3,7 @@ import Layout from "../components/_App/layout"
 import Seo from "../components/_App/seo"
 import Navbar from "../components/_App/Navbar"
 import MainBanner from "../components/BigDataAnalysisStartup/MainBanner"
+import Banner from "../components/Index/Banner"
 import FeaturedServices from "../components/BigDataAnalysisStartup/FeaturedServices"
 import WhyChooseUs from "../components/BigDataAnalysisStartup/WhyChooseUs"
 import WhatWeDo from "../components/BigDataAnalysisStartup/WhatWeDo"
@@ -23,35 +24,19 @@ const IndexPage = () => (
 
     <Navbar />
 
-    <MainBanner />
+    <Banner />
 
-    <FeaturedServices />
-
-    <WhyChooseUs />
+    {/* <FeaturedServices />
 
     <WhatWeDo />
 
-    <Funfacts />
+    <Funfacts /> */}
 
     <Services />
 
     <Testimonials />
 
-    <WeServe />
-
-    <TeamMembers />
-
-    <CaseStudy />
-
-    <BlogPost />
-
-    <StartProject />
-
-    <ComingSoon/>
-
     <Footer />
-
-    <MembershipLevels/>
 
   </Layout>
 )

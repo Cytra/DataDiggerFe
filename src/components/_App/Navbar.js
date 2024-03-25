@@ -74,12 +74,23 @@ const Navbar = () => {
 
                   <li className="nav-item">
                     <Link
-                      to="/history"
+                      to="/pricing"
                       activeClassName="active"
                       onClick={() => setCollapsed(true)}
                       className="nav-link"
                     >
-                      History
+                      Pricing
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link
+                      to="/faq"
+                      activeClassName="active"
+                      onClick={() => setCollapsed(true)}
+                      className="nav-link"
+                    >
+                      FAQ
                     </Link>
                   </li>
 
@@ -105,16 +116,7 @@ const Navbar = () => {
                     </Link>
                   </li>
 
-                  <li className="nav-item">
-                    <Link
-                      to="/faq"
-                      activeClassName="active"
-                      onClick={() => setCollapsed(true)}
-                      className="nav-link"
-                    >
-                      FAQ
-                    </Link>
-                  </li>
+
 
                   <li className="nav-item">
                     <Link

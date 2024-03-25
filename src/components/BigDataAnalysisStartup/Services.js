@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import ServiceIcon1 from "../../images/services/service-icon1.png"
 import ServiceIcon7 from "../../images/services/service-icon7.png"
 import ServiceIcon8 from "../../images/services/service-icon8.png"
-import ServiceIcon9 from "../../images/services/service-icon9.png"
+import ServiceIcon5 from "../../images/services/service-icon5.png"
 import ServiceIcon10 from "../../images/services/service-icon10.png"
 import ServiceIcon11 from "../../images/services/service-icon11.png"
 import ServiceIcon12 from "../../images/services/service-icon12.png"
@@ -15,30 +16,28 @@ const Services = () => {
       <section className="services-area ptb-100">
         <div className="container">
           <div className="section-title">
-            <h2>Services We Can Help You With</h2>
-            <p>
+            <h2>Features</h2>
+            {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna.
-            </p>
+            </p> */}
           </div>
 
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="single-services-box-item">
                 <div className="icon">
-                  <img src={ServiceIcon7} alt="Service Icon" />
+                  <img src={ServiceIcon1} alt="Service Icon" />
                 </div>
                 <h3>
-                  <Link to="/services/service-details">Big Data Analysis</Link>
+                  Real browser rendering
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod ut labore et dolore magna aliqua.
+                We manage thousands of headless instances using the 
+                latest Chrome version. Focus on extracting the data 
+                you need, not dealing with inefficient headless browsers.
                 </p>
 
-                <Link to="/services/service-details" className="learn-more-btn">
-                  <i className="flaticon-right"></i> Learn More
-                </Link>
                 <div className="shape">
                   <img src={ServiceShape4} alt="Service Shape" />
                 </div>
@@ -51,16 +50,15 @@ const Services = () => {
                   <img src={ServiceIcon8} alt="Service Icon" />
                 </div>
                 <h3>
-                  <Link to="/services/service-details">Robust Analytics</Link>
+                Render JavaScript
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod ut labore et dolore magna aliqua.
+                With JavaScript rendering, a simple parameter 
+                enables you to scrape any web page, even 
+                single-page applications using React, AngularJS, 
+                Vue.js, or any other libraries.
                 </p>
 
-                <Link to="/services/service-details" className="learn-more-btn">
-                  <i className="flaticon-right"></i> Learn More
-                </Link>
                 <div className="shape">
                   <img src={ServiceShape4} alt="Service Shape" />
                 </div>
@@ -70,26 +68,21 @@ const Services = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="single-services-box-item">
                 <div className="icon">
-                  <img src={ServiceIcon9} alt="Service Icon" />
+                  <img src={ServiceIcon5} alt="Service Icon" />
                 </div>
                 <h3>
-                  <Link to="/services/service-details">Marketing Analytics</Link>
+                Rotate proxies
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod ut labore et dolore magna aliqua.
+                  Rotate proxies to bypass rate limiting
                 </p>
-
-                <Link to="/services/service-details" className="learn-more-btn">
-                  <i className="flaticon-right"></i> Learn More
-                </Link>
                 <div className="shape">
                   <img src={ServiceShape4} alt="Service Shape" />
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            {/* <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="single-services-box-item wow fadeInUp">
                 <div className="icon">
                   <img src={ServiceIcon10} alt="Service Icon" />
@@ -153,7 +146,7 @@ const Services = () => {
                   <img src={ServiceShape4} alt="Service Shape" />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

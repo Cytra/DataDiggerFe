@@ -33,17 +33,12 @@ const FAQPage = () => {
               <AccordionItem uuid="a">
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    Q1. What is Data Science? List the differences between
-                    supervised and unsupervised learning.
+                    Q1. What happens if a request fails?
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                  We only charge for successful requests, i.e returning with a 200 or 404 status code.
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -51,16 +46,14 @@ const FAQPage = () => {
               <AccordionItem uuid="b">
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    Q2. What is Selection Tracer.com?
+                    Q2. I'm not a developer, can you create custom scraping scripts for me?
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                  We don't create custom scraping scripts, 
+                  however we will gladly write some code 
+                  snippets helping you to use our most powerful features:
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -68,16 +61,16 @@ const FAQPage = () => {
               <AccordionItem uuid="c">
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    Q3. What is tracer-variance trade-off?
+                    Q3. What is an API Credit?
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                  Each plan gives a certain amount of API credits per month.
+                   Depending on the parameters you use with your API calls 
+                   it will cost you from one to several credits. By default, 
+                   each request costs 5 credits because JavaScript rendering 
+                   is enabled by default. Learn more about requests costs.
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -85,16 +78,16 @@ const FAQPage = () => {
               <AccordionItem uuid="d">
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    Q4. What is a confusion matrix?
+                    Q4. What happens if I run out of credits before the end of my current subscription?
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                  No worries, we got you covered. If you temporarily 
+                  need more credits, you can do two things. Either 
+                  upgrade your plan for the current month. You will 
+                  be able to downgrade it later whenever you want. 
+                  Or you can early renew your current subscription in two clicks.
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -102,17 +95,14 @@ const FAQPage = () => {
               <AccordionItem uuid="e">
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    Q5. What is the difference between “long” and “wide” format
-                    data?
+                    Q5. Can I cancel my plan any time?
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                  Yes, you can cancel your subscription plan at 
+                  any time. It can be done in less than 30 seconds 
+                  from your dashboard.
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>

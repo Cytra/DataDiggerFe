@@ -9,10 +9,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Rewy - Gatsby React IT Startup & Technology Template`,
-    description: `Gatsby React IT Startup & Technology Template`,
-    author: `@envytheme`,
-    siteUrl: `https://rewy-gatsby.envytheme.com`,
+    title: `DataBridge - Web Scraping API`,
+    description: `DataBridge - Web Scraping API`,
+    author: `Martynas Samuilovas`
   },
   plugins: [
     `gatsby-plugin-image`,

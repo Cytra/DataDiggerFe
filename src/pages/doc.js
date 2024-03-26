@@ -24,7 +24,7 @@ const DocPage = () => {
         pageTitle="Documentation"
         homePageText="Home"
         homePageUrl="/"
-        activePageText="Doc"
+        activePageText="Documentation"
       />
 
       <Documenation />
@@ -40,6 +40,6 @@ const DocPage = () => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Doc" />
+export const Head = () => <Seo title="Documentation" />
 
 export default DocPage

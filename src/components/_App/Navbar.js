@@ -2,7 +2,7 @@ import React from "react"
 import { useRecoilState } from "recoil"
 import { collapsedState } from "../../utils/recoil-atoms"
 import { Link } from "gatsby"
-import logo from "../../images/logo.png"
+import logo from "../../images/logo5.png"
 
 const Navbar = () => {
   const [collapsed, setCollapsed] = useRecoilState(collapsedState)

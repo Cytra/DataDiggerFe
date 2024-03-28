@@ -1,7 +1,7 @@
 import React from "react"
 import AOS from "aos"
 import { Link } from "gatsby"
-import bannerImg from "../../images/banner-img1.png"
+import bannerImg from "../../images/banner-img1old.png"
 
 const Banner = () => {
   React.useEffect(() => {

@@ -1,5 +1,4 @@
 import React from "react";
-import starIcon from "../../images/star-icon.png";
 import contact from "../../images/contact.png";
 import { useForm, ValidationError } from '@formspree/react';
 

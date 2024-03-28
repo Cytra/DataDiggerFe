@@ -3,14 +3,6 @@ import Layout from "../components/_App/layout"
 import Seo from "../components/_App/seo"
 import Navbar from "../components/_App/Navbar"
 import PageBanner from "../components/Common/PageBanner"
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemPanel,
-  AccordionItemButton,
-} from "react-accessible-accordion"
-import StartProject from "../components/Common/StartProject"
 import Footer from "../components/_App/Footer"
 import Documenation from "../components/Documentation/Documenation"
 

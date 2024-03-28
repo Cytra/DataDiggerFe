@@ -1,5 +1,4 @@
 import React from "react"
-import privacyPolicy from "../../images/privacy-policy.jpg"
 import CodeBlock from "./CodeBlock";
 
 const examples = [
@@ -80,12 +79,6 @@ const examples = [
       data: {
         "url": "https://quotes.toscrape.com",
         "extractRules": {
-          "title": {
-            "itemType": "item",
-            "selector": {
-              "element": "H1"
-            }
-          },
           "links": {
             "itemType": "list",
             "selector": {
@@ -98,7 +91,6 @@ const examples = [
     response: {
       status: 200,
       data: {
-        "title": "Quotes to Scrape",
         "links": [
           "/",
           "/login",
@@ -198,8 +190,7 @@ const examples = [
           "title": {
             "selector": {
               "element": "h1"
-            },
-            "itemType": "Item"
+            }
           },
           "articles": {
             "selector": {
@@ -210,20 +201,17 @@ const examples = [
               "link": {
                 "selector": {
                   "element": "a"
-                },
-                "itemType": "Item"
+                }
               },
               "title": {
                 "selector": {
                   "element": "h4"
-                },
-                "itemType": "Item"
+                }
               },
               "description": {
                 "selector": {
                   "element": "p"
-                },
-                "itemType": "Item"
+                }
               }
             }
           }

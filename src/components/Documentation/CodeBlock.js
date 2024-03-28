@@ -1,6 +1,6 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { okaidia, solarizedlight, tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'; // or any other style you prefer
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'; // or any other style you prefer
 
 const CodeBlock = ({ language, code }) => {
   return (

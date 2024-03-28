@@ -4,7 +4,6 @@ import Seo from "../components/_App/seo"
 import Navbar from "../components/_App/Navbar"
 import PageBanner from "../components/Common/PageBanner"
 import Footer from "../components/_App/Footer"
-import { Link } from "gatsby"
 import MembershipLevels from "../components/MembershipLevels/MembershipLevels"
 
 const MembershipLevelsPage = () => {
@@ -19,7 +18,7 @@ const MembershipLevelsPage = () => {
         activePageText="Member Ship Levels"
       />
 
-<MembershipLevels/>
+      <MembershipLevels />
       <Footer />
     </Layout>
   )

@@ -1,134 +1,318 @@
 import React from "react"
 import privacyPolicy from "../../images/privacy-policy.jpg"
-import CodeBlock from "./CodeBlock"; 
+import CodeBlock from "./CodeBlock";
+
+const examples = [
+  {
+    title: 'Example 1: Basic Usage',
+    description: 'Providing a url to the website you want to scrape',
+    request: {
+      data: {
+        "url": "https://quotes.toscrape.com"
+      }
+    },
+    response: {
+      status: 200,
+      data: {
+      }
+    }
+  },
+  {
+    title: 'Example 2: Submitting extractRules',
+    description: 'Submitting Extract Rules, that show the info you need. Extract Rules is a dictionary, where the Key is will be inte response and the value is used to scrape the data. In this example we provice the selector object that selects by the HTML element and finds he first H1 element.',
+    request: {
+      data: {
+        "url": "https://quotes.toscrape.com",
+        "extractRules": {
+          "title": {
+            "selector": {
+              "element": "h1"
+            }
+          }
+        }
+      }
+    },
+    response: {
+      status: 200,
+      data: {
+        "title": "Quotes to Scrape"
+      }
+    }
+  },
+  {
+    title: 'Example 3: Other selector options',
+    description: 'You can select the elements you need with 3 options: "element" - this can be H1, DIV, A, LINK or any other HTML element, "class" - the element class. "id" - Element Id',
+    request: {
+      data: {
+        "url": "https://quotes.toscrape.com",
+        "extractRules": {
+          "title": {
+            "selector": {
+              "element": "h1"
+            }
+          },
+          "titleByClass": {
+            "selector": {
+              "class": "col-md-8"
+            }
+          },
+          "ById": {
+            "selector": {
+              "id": "titleId"
+            }
+          }
+        }
+      }
+    },
+    response: {
+      status: 200,
+      data: {
+        "title": "Quotes to Scrape",
+        "titleByClass": "Quotes to Scrape",
+        "ById": null
+      }
+    }
+  },
+  {
+    title: 'Example 4: Extract rule with "itemType" of type "list" ',
+    description: 'By default all response items have a "itemType" of "item". But you can provide one of these options "item", "list", "tableJson", "tableArray". In this example, we need a list, then the API will fetch all items it can find with provided selector.',
+    request: {
+      data: {
+        "url": "https://quotes.toscrape.com",
+        "extractRules": {
+          "title": {
+            "itemType": "item",
+            "selector": {
+              "element": "H1"
+            }
+          },
+          "links": {
+            "itemType": "list",
+            "selector": {
+              "element": "a"
+            }
+          }
+        }
+      }
+    },
+    response: {
+      status: 200,
+      data: {
+        "title": "Quotes to Scrape",
+        "links": [
+          "/",
+          "/login",
+          "/author/Albert-Einstein",
+          "https://www.zyte.com"
+        ]
+      }
+    }
+  },
+  {
+    title: 'Example 5: Extracting "tableJson".',
+    description: 'Extracting "tableJson", the response will be a table in JSON form. The item in the selector has to be a Table HTML element',
+    request: {
+      data: {
+        "url": "https://www.scrapingbee.com/documentation/data-extraction/",
+        "extractRules": {
+          "table": {
+            "itemType": "tableJson",
+            "selector": {
+              "element": "table"
+            }
+          }
+        }
+      }
+    },
+    response: {
+      status: 200,
+      data: {
+        "table": [
+          {
+            "Feature used": "Rotating Proxy without JavaScript rendering",
+            "API credit cost": "1"
+          },
+          {
+            "Feature used": "Rotating Proxy with JavaScript rendering (default)",
+            "API credit cost": "5"
+          },
+          {
+            "Feature used": "Premium Proxy without JavaScript rendering",
+            "API credit cost": "10"
+          },
+          {
+            "Feature used": "Premium Proxy with JavaScript rendering",
+            "API credit cost": "25"
+          }
+        ]
+      }
+    },
+  },
+  {
+    title: 'Example 6: Extracting "tableArray"',
+    description: 'Extracting "tableArray", the response will be a table in array form.',
+    request: {
+      data: {
+        "url": "https://www.scrapingbee.com/documentation/data-extraction/",
+        "extractRules": {
+          "table": {
+            "itemType": "tableJson",
+            "selector": {
+              "element": "table"
+            }
+          }
+        }
+      }
+    },
+    response: {
+      status: 200,
+      data: {
+        "table": [
+          [
+            "Rotating Proxy without JavaScript rendering",
+            "1"
+          ],
+          [
+            "Rotating Proxy with JavaScript rendering (default)",
+            "5"
+          ],
+          [
+            "Premium Proxy without JavaScript rendering",
+            "10"
+          ],
+          [
+            "Premium Proxy with JavaScript rendering",
+            "25"
+          ]
+        ]
+      }
+    },
+  },
+  {
+    title: 'Example 7: Nested object',
+    description: 'Extracting nested Objects. This can be usefull if you have articles and want to have specific items withing the article card',
+    request: {
+      data: {
+        "url": "https://www.scrapingbee.com/blog/",
+        "extractRules": {
+          "title": {
+            "selector": {
+              "element": "h1"
+            },
+            "itemType": "Item"
+          },
+          "articles": {
+            "selector": {
+              "class": "w-full sm:w-1/2 p-10 md:p-28 flex"
+            },
+            "itemType": "List",
+            "output": {
+              "link": {
+                "selector": {
+                  "element": "a"
+                },
+                "itemType": "Item"
+              },
+              "title": {
+                "selector": {
+                  "element": "h4"
+                },
+                "itemType": "Item"
+              },
+              "description": {
+                "selector": {
+                  "element": "p"
+                },
+                "itemType": "Item"
+              }
+            }
+          }
+        }
+      }
+    },
+    response: {
+      status: 200,
+      data: {
+        "title": "The ScrapingBee Blog",
+        "articles": [
+          [
+            {
+              "link": "/blog/how-to-scrape-emails-from-any-website-for-sales-prospecting/"
+            },
+            {
+              "title": "How to scrape emails from any website"
+            },
+            {
+              "description": "Learn how to scrape emails from any website, we show you how to bypass bot protection to extract the emails you need."
+            }
+          ],
+          [
+            {
+              "link": "/blog/how-to-web-scrape-airbnb-data/"
+            },
+            {
+              "title": "How to Web Scrape Airbnb data (Easy Working Code Example)"
+            },
+            {
+              "description": "Unlock Airbnb insights! Scrape listings like a pro with our easy code example. Short let insights, pricing intel &amp; more - all at your fingertips."
+            }
+          ]
+        ]
+      }
+    },
+  }
+];
 
 const Documenation = () => {
   return (
-      <section className="privacy-policy-area ptb-100">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8 col-md-12">
-              <div className="privacy-policy-content">
-                <img src={privacyPolicy} alt="privacyPolicy" />
+    <section className="privacy-policy-area ptb-100">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-8 col-md-12">
+            <div className="privacy-policy-content">
+              {/* <img src={privacyPolicy} alt="privacyPolicy" /> */}
 
-                <blockquote className="blockquote">
-                  <p>
+              {/* <blockquote className="blockquote">
+                <p>
                   This page explains how to use a specific feature of our web scraping API!
-                  </p>
-                </blockquote>
-
-                <h3>Basic usage</h3>
-                <p>
-                First we will have to specify the DataBridge Url - http://157.245.26.191/api/v1/explicit-json.
-                Then we will have to use the POST http method. 
-                In order to scrape a website we will also have to provide a 
-                json payload with url property. The whole request is shown below.
                 </p>
-                <CodeBlock language="bash" code={`
-curl --location 'http://157.245.26.191/api/v1/explicit-json' 
---header 'Content-Type: application/json' 
---data '{
-	"url": "https://quotes.toscrape.com"
-}'
-`} />
-              <p>Generated response for this call:</p>
-              <CodeBlock language="bash" code={`
-{
-  "title": "Quotes to Scrape"
-}'          
-                `} />
+              </blockquote> */}
 
-                <h3>2. Data You Provide to Us</h3>
-                <p>
-                  We may collect different data from or about you depending on
-                  how you use the Services. Below are some examples to help you
-                  better understand the data we collect.
-                </p>
+              <div>
+                <h2>API Documentation</h2>
+                <h3>Data Scrapint API endpoint</h3>
+                <p>This endpoint is used to submit data in JSON format.</p>
+                <div>
+                  <ul>
+                    <li>Api Url - http://157.245.26.191</li>
+                    <li>Endpoint - api/v1/explicit-json</li>
+                    <li>Method - POST</li>
+                  </ul>
+                </div>
 
-                <h3>3. How We Get Data About You</h3>
-                <p>
-                  We use tools like cookies, web beacons, analytics services,
-                  and advertising providers to gather the data listed above.
-                  Some of these tools offer you the ability to opt out of data
-                  collection.
-                </p>
+                <h4>Examples:</h4>
+                {examples.map((example, index) => (
+                  <div key={index}>
+                    <h3>{example.title}</h3>
+                    <p>{example.description}</p>
+                    <p>Request JSON:</p>
+                    <CodeBlock language="json" code={JSON.stringify(example.request, null, 2)} />
 
-                <h3>4. What We Use Your Data For</h3>
-                <ol>
-                  <li>Responding to your questions and concerns;</li>
-                  <li>
-                    Sending you administrative messages and information,
-                    including messages from instructors and teaching assistants,
-                    notifications about changes to our Service, and updates to
-                    our agreements;
-                  </li>
-                  <li>
-                    Sending push notifications to your wireless device to
-                    provide updates and other relevant messages (which you can
-                    manage from the “options” or “settings” page of the mobile
-                    app);
-                  </li>
-                </ol>
-
-                <h3>5. Your Choices About the Use of Your Data</h3>
-                <p>
-                  You can choose not to provide certain data to us, but you may
-                  not be able to use certain features of the Services.
-                </p>
-                <ul>
-                  <li>
-                    To stop receiving promotional communications from us, you
-                    can opt out by using the unsubscribe mechanism in the
-                    promotional communication you receive or by changing the
-                    email preferences in your account. Note that regardless of
-                    your email preference settings, we will send you
-                    transactional and relationship messages regarding the
-                    Services, including administrative confirmations, order
-                    confirmations, important updates about the Services, and
-                    notices about our policies.
-                  </li>
-                  <li>
-                    The browser or device you use may allow you to control
-                    cookies and other types of local data storage. Your wireless
-                    device may also allow you to control whether location or
-                    other data is collected and shared. You can manage Adobe’s
-                    LSOs through their Website Storage Settings panel.
-                  </li>
-                  <li>
-                    To get information and control cookies used for tailored
-                    advertising from participating companies, see the consumer
-                    opt-out pages for the Network Advertising Initiative and
-                    Digital Advertising Alliance, or if you’re located in the
-                    European Union, visit the Your Online Choices site. To opt
-                    out of Google’s display advertising or customize Google
-                    Display Network ads, visit the Google Ads Settings page. To
-                    opt out of Taboola’s targeted ads, see the Opt-out Link in
-                    their Cookie Policy.
-                  </li>
-                  <li>
-                    To update data you provide directly, log into your account
-                    and update your account at any time.
-                  </li>
-                </ul>
-
-                <h3>6. Our Policy Concerning Children</h3>
-                <p>
-                  We recognize the privacy interests of children and encourage
-                  parents and guardians to take an active role in their
-                  children’s online activities and interests. Children under 13
-                  (or under 16 in the European Economic Area) should not use the
-                  Services. If we learn that we’ve collected personal data from
-                  a child under those ages, we will take reasonable steps to
-                  delete it.
-                </p>
-
+                    {example.response && (
+                      <>
+                        <p>Response:</p>
+                        <CodeBlock language="json" code={JSON.stringify(example.response.data, null, 2)} />
+                      </>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   )
 }
-
 
 export default Documenation

@@ -1,24 +1,21 @@
-import React from "react"
-import starIcon from "../../images/star-icon.png"
-import contact from "../../images/contact.png"
+import React from "react";
+import starIcon from "../../images/star-icon.png";
+import contact from "../../images/contact.png";
+import { useForm, ValidationError } from '@formspree/react';
 
 const ContactForm = () => {
+  const [state, handleSubmit] = useForm("mdoqwozg");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
   return (
     <>
       <section className="contact-area pb-100">
         <div className="container">
           <div className="section-title">
-            <span className="sub-title">
-              <img src={starIcon} alt="contact" />
-              Get in Touch
-            </span>
-            <h2>Ready to Get Started?</h2>
-            <p>
-              Your email address will not be published. Required fields are
-              marked *
-            </p>
+            <h2>Contact Us</h2>
           </div>
-
           <div className="row">
             <div className="col-lg-6 col-md-12">
               <div className="contact-image">
@@ -28,40 +25,25 @@ const ContactForm = () => {
 
             <div className="col-lg-6 col-md-12">
               <div className="contact-form">
-                <form id="contactForm">
+                <form
+                  onSubmit={handleSubmit}
+                >
                   <div className="row">
-                    <div className="col-lg-12 col-md-6">
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          name="name"
-                          className="form-control"
-                          required
-                          placeholder="Your name"
-                        />
-                      </div>
-                    </div>
 
                     <div className="col-lg-12 col-md-6">
                       <div className="form-group">
                         <input
+                          id="email"
                           type="email"
                           name="email"
                           className="form-control"
                           required
                           placeholder="Your email address"
                         />
-                      </div>
-                    </div>
-
-                    <div className="col-lg-12 col-md-12">
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          name="phone_number"
-                          className="form-control"
-                          required
-                          placeholder="Your phone number"
+                        <ValidationError
+                          prefix="Email"
+                          field="email"
+                          errors={state.errors}
                         />
                       </div>
                     </div>
@@ -69,6 +51,7 @@ const ContactForm = () => {
                     <div className="col-lg-12 col-md-12">
                       <div className="form-group">
                         <textarea
+                          id="message"
                           name="message"
                           className="form-control"
                           cols="30"
@@ -80,7 +63,7 @@ const ContactForm = () => {
                     </div>
 
                     <div className="col-lg-12 col-md-12">
-                      <button type="submit" className="default-btn">
+                      <button type="submit" className="default-btn" disabled={state.submitting}>
                         <i className="flaticon-tick"></i>
                         Send Message <span></span>
                       </button>
@@ -93,7 +76,7 @@ const ContactForm = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

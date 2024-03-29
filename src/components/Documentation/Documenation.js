@@ -246,14 +246,14 @@ const Documenation = () => {
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-12">
             <div className="privacy-policy-content">
-              
+
               <div>
                 <h2>API Documentation</h2>
                 <h3>Data Scrapint API endpoint</h3>
                 <p>This endpoint is used to submit data in JSON format.</p>
                 <div>
                   <ul>
-                    <li>Api Url - http://157.245.26.191</li>
+                    <li>Api Url - http://209.38.184.76</li>
                     <li>Endpoint - api/v1/explicit-json</li>
                     <li>Method - POST</li>
                   </ul>

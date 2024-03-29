@@ -223,28 +223,16 @@ const examples = [
       data: {
         "title": "The ScrapingBee Blog",
         "articles": [
-          [
-            {
-              "link": "/blog/how-to-scrape-emails-from-any-website-for-sales-prospecting/"
-            },
-            {
-              "title": "How to scrape emails from any website"
-            },
-            {
-              "description": "Learn how to scrape emails from any website, we show you how to bypass bot protection to extract the emails you need."
-            }
-          ],
-          [
-            {
-              "link": "/blog/how-to-web-scrape-airbnb-data/"
-            },
-            {
-              "title": "How to Web Scrape Airbnb data (Easy Working Code Example)"
-            },
-            {
-              "description": "Unlock Airbnb insights! Scrape listings like a pro with our easy code example. Short let insights, pricing intel &amp; more - all at your fingertips."
-            }
-          ]
+          {
+            "link": "/blog/how-to-scrape-emails-from-any-website-for-sales-prospecting/",
+            "title": "How to scrape emails from any website",
+            "description": "Learn how to scrape emails from any website, we show you how to bypass bot protection to extract the emails you need."
+          },
+          {
+            "link": "/blog/getting-started-with-apache-nutch/",
+            "title": "Getting Started with Apache Nutch",
+            "description": "In this tutorial, you will demonstrate how to get started with Apache Nutch, an open source web crawler project by Apache."
+          }
         ]
       }
     },
@@ -258,14 +246,7 @@ const Documenation = () => {
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-12">
             <div className="privacy-policy-content">
-              {/* <img src={privacyPolicy} alt="privacyPolicy" /> */}
-
-              {/* <blockquote className="blockquote">
-                <p>
-                  This page explains how to use a specific feature of our web scraping API!
-                </p>
-              </blockquote> */}
-
+              
               <div>
                 <h2>API Documentation</h2>
                 <h3>Data Scrapint API endpoint</h3>
@@ -284,8 +265,7 @@ const Documenation = () => {
                     <h3>{example.title}</h3>
                     <p>{example.description}</p>
                     <p>Request JSON:</p>
-                    <CodeBlock language="json" code={JSON.stringify(example.request, null, 2)} />
-
+                    <CodeBlock language="json" code={JSON.stringify(example.request.data, null, 2)} />
                     {example.response && (
                       <>
                         <p>Response:</p>

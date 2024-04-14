@@ -3,8 +3,8 @@ import Layout from "../components/_App/layout"
 import Seo from "../components/_App/seo"
 import Navbar from "../components/_App/Navbar"
 import PageBanner from "../components/Common/PageBanner"
-import LoginForm from "../components/ProfileAuthentication/LoginForm"
-import RegisterForm from "../components/ProfileAuthentication/RegisterForm"
+import GoogleLoginForm from "../components/ProfileAuthentication/GoogleLogin"
+import GoogleRegisterForm from "../components/ProfileAuthentication/GoogleRegisterForm"
 import Footer from "../components/_App/Footer"
 
 const ProfileAuthenticationPage = () => {
@@ -24,11 +24,13 @@ const ProfileAuthenticationPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-md-12">
-              <LoginForm />
+              {/* <LoginForm /> */}
+              <GoogleLoginForm/>
             </div>
 
             <div className="col-lg-6 col-md-12">
-              <RegisterForm />
+              {/* <RegisterForm /> */}
+              <GoogleRegisterForm/>
             </div>
           </div>
         </div>
@@ -40,11 +42,6 @@ const ProfileAuthenticationPage = () => {
   )
 }
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Seo title="Profile Authentication" />
 
 export default ProfileAuthenticationPage

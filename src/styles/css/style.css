@@ -172,6 +172,73 @@ a:hover {
   background-color: #fafafa;
 }
 
+.error-message {
+  padding: 10px;
+  margin: 10px 0;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.Profile {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.Profile h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.Profile p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.Profile button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #ff5d22;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Profile button:hover {
+  background-color: #221638;
+}
+
+.cart-buttons .shopping-coupon-code button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  background: #221638;
+  color: #ffffff;
+  border: none;
+  padding: 0 25px;
+  line-height: 48px;
+  outline: 0;
+  transition: 0.5s;
+  font-size: 16px;
+  font-weight: 700;
+}
+.cart-buttons .shopping-coupon-code button:hover {
+  background-color: #ff5d22;
+}
+
 /* default-btn */
 .default-btn {
   border: none;

@@ -3,15 +3,11 @@ import { useRecoilState } from "recoil"
 import { collapsedState } from "../../utils/recoil-atoms"
 import { Link } from "gatsby"
 import logo from "../../images/logo.png"
-import { useUser } from "../Context/userContext"
+import { useUserContext  } from "../Context/userContext"
 
 const Navbar = () => {
 
-  const { user } = useUser();
-
-  // const handleLogout = () => {
-
-  // };
+  const { user } = useUserContext();
 
   const [collapsed, setCollapsed] = useRecoilState(collapsedState)
 

@@ -3,7 +3,6 @@ const backendUrl = process.env.BACKEND_URL;
 
 const Backend = {
   login: async (email: string) => {
-    console.log("login")
     try {
       const response = await fetch(`${backendUrl}/api/v1/user/login/${email}`, {
         method: 'GET',
@@ -14,7 +13,6 @@ const Backend = {
   
       if (response.ok) {
         const userObject = await response.json();
-        console.log('User object:', userObject);
   
         const user: User = {
           id: userObject.id,
@@ -25,11 +23,10 @@ const Backend = {
         };
         return user;
       } else {
-        console.error('Client does not exist in the backend.');
+
         return null;
       }
     } catch (error) {
-      console.error('Error during API call:', error);
       return null;
     }
   },
@@ -53,7 +50,6 @@ const Backend = {
   
       if (response.ok) {
         const userObject = await response.json();
-        console.log('User registered successfully:', userObject);
   
         const user: User = {
           id: userObject.id,
@@ -64,11 +60,9 @@ const Backend = {
         };
         return user;
       } else {
-        console.error('Error during user registration.');
         return null;
       }
     } catch (error) {
-      console.error('Error during API call:', error);
       return null;
     }
   },

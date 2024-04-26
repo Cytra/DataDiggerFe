@@ -4,11 +4,11 @@ import { jwtDecode } from "jwt-decode";
 import { navigate } from "gatsby";
 import Backend from "./Backend";
 import ErrorMessage from './ErrorMessage';
-import { useUser } from '../Context/userContext';
+import { useUserContext  } from '../Context/userContext';
 
 const GoogleLogin = () => {
     const [error, setError] = useState(null);
-    const { updateUser } = useUser();
+    const { updateUser } = useUserContext();
 
     const handleGoogleSuccess = async (response) => {
         try {
@@ -22,7 +22,6 @@ const GoogleLogin = () => {
                 setError("User does not exist - Please Register");
                 return;
             }
-            console.log(backendUser);
 
             updateUser({
                 apiKey: backendUser.apiKey,
@@ -39,7 +38,6 @@ const GoogleLogin = () => {
     };
 
     const handleGoogleFailure = (error) => {
-        console.error('Google login error:', error);
         setError("Error when logging in");
     };
 

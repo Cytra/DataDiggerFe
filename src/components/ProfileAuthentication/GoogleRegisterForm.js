@@ -4,10 +4,10 @@ import { jwtDecode } from "jwt-decode";
 import { navigate } from "gatsby";
 import Backend from "./Backend"; 
 import ErrorMessage from './ErrorMessage';
-import { useUser } from '../Context/userContext';
+import { useUserContext  } from '../Context/userContext';
 
 const RegsiterLogin = () => {
-    const { updateUser } = useUser();
+    const { updateUser } = useUserContext();
     const [error, setError] = useState(null);
 
     const handleGoogleSuccess = async (response) => {
@@ -30,7 +30,7 @@ const RegsiterLogin = () => {
                 created: backendUser.created
               });
 
-            console.log(backendUser);
+
 
             navigate("/profile");
 
@@ -40,7 +40,7 @@ const RegsiterLogin = () => {
     };
 
     const handleGoogleFailure = (error) => {
-        console.error('Google login error:', error);
+
     };
 
     return (

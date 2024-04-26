@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useUser } from "../Context/userContext";
+import { useUserContext  } from "../Context/userContext";
 
 const Profile = () => {
-    const { user, updateUser, logout } = useUser();
+    const { user, updateUser, logout } = useUserContext();
     const [activeSection, setActiveSection] = useState('profileInfo'); // Default active section
 
     const handleUnsubscribe = () => {

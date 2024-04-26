@@ -4,17 +4,12 @@ import React, { createContext, useState, useContext } from 'react';
 const UserContext = createContext();
 
 // Custom hook to consume the user context
-export const useUser = () => {
-  const context = useContext(UserContext);
 
-  if (!context) {
-    throw new Error('useUser must be used within a UserProvider');
-  }
+export function useUserContext() {
+  return useContext(UserContext);
+}
 
-  return context;
-};
-
-export const UserProvider = ({ children }) => {
+export const UserContextProvider = ({ children }) => {
   const initialUserState = {
     apiKey: null,
     membershipPlan: null,

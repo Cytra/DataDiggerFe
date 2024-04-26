@@ -17,20 +17,20 @@ import "swiper/css"
 import "swiper/css/bundle"
 
 
-// Global style
+// Global styles
 import "./src/styles/css/style.css" 
 import "./src/styles/css/responsive.css" 
 
  
 import React from "react";
-import { UserProvider } from "./src/components/Context/userContext";
+import { UserContextProvider  } from "./src/components/Context/userContext";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 export const wrapRootElement = ({ element }) => {
-    return <UserProvider>
+    return <UserContextProvider>
             <GoogleOAuthProvider clientId="1038931837392-r7jjta7vovupq1cm9j6ik0gnjj5q1vvk.apps.googleusercontent.com">
             {element}
             </GoogleOAuthProvider>
-            </UserProvider>
+            </UserContextProvider>
     
 };

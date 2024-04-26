@@ -22,7 +22,6 @@ const GoogleLogin = () => {
                 setError("User does not exist - Please Register");
                 return;
             }
-
             console.log(backendUser);
 
             updateUser({

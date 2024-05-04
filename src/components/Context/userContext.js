@@ -14,15 +14,25 @@ export const UserContextProvider = ({ children }) => {
     apiKey: null,
     membershipPlan: null,
     email: null,
-    created: null
+    created: null,
+    Id: null
   };
 
   const [user, setUser] = useState(initialUserState);
+  const [priceId, setPriceId] = useState("");
 
   // Example function to update user data
   const updateUser = (newUser) => {
     setUser(newUser);
   };
+
+  const setPaymentId = (priceId) => {
+    setPriceId(priceId)
+  }
+
+  const getUser = () => {
+    return user;
+  }
 
   // Function to logout and clear user settings
   const logout = () => {
@@ -31,7 +41,7 @@ export const UserContextProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, updateUser, logout }}>
+    <UserContext.Provider value={{ user, updateUser, logout, setPaymentId, priceId, getUser }}>
       {children}
     </UserContext.Provider>
   );

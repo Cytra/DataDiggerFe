@@ -1,7 +1,39 @@
 import React from "react"
 import { Link } from "gatsby"
+import Backend from "../Backend/Backend";
+import { navigate } from "gatsby";
+import { useUserContext  } from "../Context/userContext"
 
 const MembershipLevels = () => {
+
+  const { setPaymentId, getUser } = useUserContext();
+
+  const paymentFlow = async (priceId) => {
+    try {
+
+      const user = getUser();
+      console.log(user);
+      if(user.Id === null){
+        setPaymentId(priceId);
+        navigate("/profile-authentication")
+        return;
+      }
+
+      const url = await Backend.generateStripeUrl(priceId, user.id);
+      console.log(url);
+
+      if (!url) {
+        throw new Error("Failed to generate payment URL");
+      }
+
+      // Use navigate function from Gatsby to navigate to the URL
+      navigate(url);
+
+    } catch (error) {
+      console.error("Error generating payment URL:", error);
+    }
+  };
+  
   return (
       <div className="membership-levels-area ptb-100">
         <div className="container">
@@ -75,17 +107,18 @@ const MembershipLevels = () => {
                 <tr>
                   <td></td>
                   <td>
-                    <Link to="#" className="select-btn">
+                    <Link to="#" className="select-btn" >
                       Get it now
                     </Link>
                   </td>
                   <td>
-                    <Link to="#" className="select-btn">
+                    
+                    <Link to="#" className="select-btn" onClick={() => paymentFlow("price_1P9nnVCM7ZpocpvZUeqpozlA")}>
                       Get it now
                     </Link>
                   </td>
                   <td>
-                    <Link to="#" className="select-btn">
+                    <Link to="#" className="select-btn" onClick={() => paymentFlow("price_1P9no4CM7ZpocpvZIZI3w25O")}>
                       Get it now
                     </Link>
                   </td>

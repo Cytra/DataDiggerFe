@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { GoogleLogin as GoogleLoginComponent } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import { navigate } from "gatsby";
-import Backend from "./Backend"; 
+import Backend from "../Backend/Backend"; 
 import ErrorMessage from './ErrorMessage';
 import { useUserContext  } from '../Context/userContext';
 

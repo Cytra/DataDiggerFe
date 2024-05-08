@@ -16,7 +16,6 @@ import "/node_modules/aos/dist/aos.css";
 import "swiper/css"
 import "swiper/css/bundle"
 
-
 // Global styles
 import "./src/styles/css/style.css" 
 import "./src/styles/css/responsive.css" 

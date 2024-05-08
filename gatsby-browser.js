@@ -20,7 +20,6 @@ import "swiper/css/bundle"
 import "./src/styles/css/style.css" 
 import "./src/styles/css/responsive.css" 
 
- 
 import React from "react";
 import { UserContextProvider  } from "./src/components/Context/userContext";
 import { GoogleOAuthProvider } from '@react-oauth/google';

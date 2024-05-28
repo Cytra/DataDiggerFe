@@ -9,8 +9,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `DataBridge - Web Scraping API`,
-    description: `DataBridge - Web Scraping API`,
+    title: `ScrapePal - Web Scraping API`,
+    description: `ScrapePal - Web Scraping API`,
     author: `Martynas Samuilovas`
   },
   plugins: [

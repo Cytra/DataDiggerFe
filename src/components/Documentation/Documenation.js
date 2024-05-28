@@ -253,7 +253,7 @@ const Documenation = () => {
                 <p>This endpoint is used to submit data in JSON format.</p>
                 <div>
                   <ul>
-                    <li>Api Url - http://209.38.184.76</li>
+                    <li>Api Url - www.scrapepalapi.com</li>
                     <li>Endpoint - api/v1/explicit-json</li>
                     <li>Method - POST</li>
                   </ul>

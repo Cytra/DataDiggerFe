@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-6">
               <p>
-                Copyright @{currentYear} <strong>DataBridge</strong> All rights
+                Copyright @{currentYear} <strong>ScrapePal</strong> All rights
                 reserved{" "}
               </p>
             </div>
@@ -31,6 +31,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="/contact">Contact</Link>
+                </li>
+
+                <li>
+                  <Link to="/privacy-policy/">Privacy Policy</Link>
                 </li>
 
               </ul>

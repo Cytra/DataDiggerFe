@@ -44,7 +44,7 @@ const Testimonials = () => {
               <div className="single-testimonials-box">
                 <img src={user1} className="shadow-sm" alt="testimonials" />
                 <p>
-                DataBridge simplified our day-to-day marketing 
+                ScrapePal simplified our day-to-day marketing 
                 and engineering operations a lot . We no longer 
                 have to worry about managing our own fleet of headless 
                 browsers, and we no longer have to spend days sourcing the right proxy provider
@@ -63,7 +63,7 @@ const Testimonials = () => {
               <div className="single-testimonials-box">
                 <img src={user2} className="shadow-sm" alt="testimonials" />
                 <p>
-                DataBridge is helping us scrape many 
+                ScrapePal is helping us scrape many 
                 job boards and company websites without 
                 having to deal with proxies or chrome browsers. 
                 It drastically simplified our data pipeline
@@ -82,7 +82,7 @@ const Testimonials = () => {
               <div className="single-testimonials-box">
                 <img src={user3} className="shadow-sm" alt="testimonials" />
                 <p>
-                DataBridge clear documentation, easy-to-use API, and great success rate made it a no-brainer.
+                ScrapePal clear documentation, easy-to-use API, and great success rate made it a no-brainer.
                 </p>
 
                 <div className="client-info">

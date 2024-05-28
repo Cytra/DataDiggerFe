@@ -49,7 +49,7 @@ const RegsiterLogin = () => {
             <div>
                 <GoogleLoginComponent
                     size="large"
-                    text="Login With Google"
+                    text="Register With Google"
                     width="400"
                     onSuccess={response => handleGoogleSuccess(response)}
                     onError={errorResponse => handleGoogleFailure(errorResponse)}

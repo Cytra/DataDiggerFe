@@ -47,11 +47,11 @@ const MembershipLevels = () => {
                     <span className="title">Silver Membership</span>
                   </th>
                   <th>
-                    <span className="price">$49/mo</span>
+                    <span className="price">$29/mo</span>
                     <span className="title">Gold Membership</span>
                   </th>
                   <th>
-                    <span className="price">$99/mo</span>
+                    <span className="price">$59/mo</span>
                     <span className="title">Diamond Membership</span>
                   </th>
                 </tr>
@@ -61,8 +61,8 @@ const MembershipLevels = () => {
                 <tr>
                   <td>API Credits</td>
                   <td>500</td>
-                  <td>10000</td>
-                  <td>30000</td>
+                  <td>5000</td>
+                  <td>15000</td>
                 </tr>
 
                 <tr>
@@ -113,12 +113,12 @@ const MembershipLevels = () => {
                   </td>
                   <td>
                     
-                    <Link to="#" className="select-btn" onClick={() => paymentFlow("price_1P9nnVCM7ZpocpvZUeqpozlA")}>
+                    <Link to="#" className="select-btn" onClick={() => paymentFlow("price_1PXpBhCM7ZpocpvZaNLtDCk4")}>
                       Get it now
                     </Link>
                   </td>
                   <td>
-                    <Link to="#" className="select-btn" onClick={() => paymentFlow("price_1P9no4CM7ZpocpvZIZI3w25O")}>
+                    <Link to="#" className="select-btn" onClick={() => paymentFlow("price_1PXpCMCM7ZpocpvZFvHfvBp8")}>
                       Get it now
                     </Link>
                   </td>
